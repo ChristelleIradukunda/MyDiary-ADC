@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #708090;
+}
+.navbar-info{
+    display:flex;
+    flex-direction: row;
+    height: 12vh;
+    flex-shrink: 1;
+    flex-basis: 1;
+   
+
+}
+.try{
+    flex-basis: 50px;
+    text-align: center;
+    flex-grow: 5;
+    background: #00324e;
+    padding: 10px;
+}
+.logo{
+margin-top: -50px;
+}
+
+.newdiary a{
+    text-decoration: none;
+    font-size: 20px;
+    color: azure;
+    padding: 5px;
+}
+
+.Details{
+
+
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    height: auto;
+    color: #dae0e7;
+    /* color: black; */
+}
+
+.first-paragraph{
+display: flex;
+flex-direction: row;
+flex-basis: 1;
+height: auto;
+width: 70%;
+font-size: 19px;
+}
+.first-paragraph p{
+    padding-top: 100px;
+    height: auto;
+}
+.first-paragraph img{
+    height:30px, auto;
+        max-width:100%;
+        width:30px, auto;
+        border:none;
+        display:block;
+}
+#img{
+   width: 200px;
+    margin-top: 100px;
+}
+.footer{
+    background-color: #00324e;
+}
