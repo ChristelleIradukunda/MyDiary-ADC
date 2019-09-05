@@ -62,7 +62,6 @@ p{
 .box input[type = "text"], .box input[type = "password"], .box input[type = "email"]{
     border: 0;
     background: none;
-    padding: 10px; 
     display: block;
     margin: 10px auto;
     text-align: center;
