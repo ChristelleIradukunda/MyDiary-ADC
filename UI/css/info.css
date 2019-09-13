@@ -66,6 +66,127 @@ font-size: 19px;
    width: 200px;
     margin-top: 100px;
 }
-.footer{
-    background-color: #00324e;
+.info{
+    display: flex;
+    height: 50vh;
+    height: auto;
+    background-size: cover;
+    justify-content: center;
+    
+} 
+
 }
+
+.shadow{
+    text-align: center;
+    max-width: 50%;
+    margin: 20px;
+    height: 4em;;
+    background-color: rgb(99, 107, 121);
+    box-shadow: 2px 2px 5px#848482;
+    font-size: 19px;
+    display: flex;
+    justify-content: center;
+    
+   
+}
+.shadow p{
+    max-width: 50%;
+    color: rgb(227, 235, 241);
+    
+}
+
+.shadow i{
+    font-size: 70px;
+    color: aliceblue;
+
+
+}
+.container3 img{
+    max-width: 100%;
+    height: auto;
+}
+
+.footer{
+    display: flex;
+    background-color: rgb(36, 39, 48);
+    max-width: 100%;
+    height: auto;   
+    justify-content: center;
+
+}
+.colors{
+    background-color: #12161d;
+    justify-content: center;
+}
+.colors a{
+    text-decoration: none;
+    color: aliceblue;
+}
+.colors a:hover{
+    color: green;
+}
+.footer ul{
+    display: flex;
+
+}
+.footer ul li{
+list-style-type: none;
+padding: 10px;
+font-size: 20px;
+margin-top: 10px;
+color: azure;
+justify-content: start;
+display: inline-block;
+}
+.footer p{
+    padding: 10px; 
+    color: azure;
+    justify-content: end;
+    font-size: 17px;
+    text-align: start;
+    margin-top: 10px;
+    
+
+}
+
+.contact li{
+    list-style-type: none;
+    background-color: #000018;
+}
+
+.second {
+    padding: 20px;
+    
+}
+.second .middle-div{
+max-width: 20%;
+}
+
+.last-button{
+background-color: #373749;
+color: #fff;
+}
+.second h4{
+    color: white;
+    font-size: 20px;
+}
+ .second div{
+    text-align: center;;
+    max-width: 30%;
+ }
+ .second li{
+    color: white;
+    list-style-type: none;
+ }
+ .end-div h4{
+     padding-bottom: 20px;
+     display: inline;
+     
+ }
+ .end-div li{
+    margin: 1em;
+ }
+ .last{
+     background-color: #11111b;
+ }
