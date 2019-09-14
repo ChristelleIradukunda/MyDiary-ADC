@@ -2,7 +2,7 @@ const notes = [
     {
         id: 1, 
         title: 'Friday Dreams',
-         Entry: 'Flying with highheels at in comedy night', 
+         entry: 'Flying with highheels at in comedy night', 
           Created_On: new Date()},
     {id: 2, 
         title: 'Secret',
