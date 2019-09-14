@@ -6,7 +6,6 @@ const take = (req, res)=>{
         data: notes,
     })
 };
+
+
 export default take;
-
-
-
