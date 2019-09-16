@@ -9,7 +9,7 @@ let igihe = {
     id: parseInt(req.body.id), 
     title: req.body.title,
     entry: req.body.entry, 
-    Created_On: new Date()
+    Date: new Date()
   };
 
   let DoIt = notes.indexOf(search);
