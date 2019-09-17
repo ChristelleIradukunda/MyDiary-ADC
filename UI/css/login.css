@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #00324e;
+    width: 100vw;
+    height: 100vh;
+}
+.user-form{
+/* background-color: #cfd6f5; */
+/* display: flex; */
+background-attachment: fixed;
+justify-content: center;
+width: 100vw;
+height: auto;
+}
+.box{
+    /* width: 500px; */
+    width: 50vw auto;
+    padding: 20px;
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: auto;
+    text-align: center;
+    background: #00324e;
+    
+}
+::placeholder{
+color: rgb(143, 167, 187);
+
+}
+.simbizi {
+    width: 180px;
+    height: 120px;
+}
+/* #close{
+font-size: 2em;
+color: aliceblue; 
+padding: 0px 500px 50px;
+} */
+h2{
+    color: rgb(206, 221, 208);
+    font-weight: 500;
+    
+}
+p{
+    color: rgb(140, 169, 194);
+    font-size: 20px; 
+      
+}
+.box a{
+    text-decoration:none;
+    color: #a5761f;
+    
+}
+.box input[type = "text"], .box input[type = "password"], .box input[type = "email"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+    border: 0.7px solid #7f899e;
+    padding: 14px 10px;
+    width: 30%;
+    outline: none;
+    color: white;
+    transition: 0.25s;
+    font-size: 18px;
+}
+.box input[type = "text"]:focus, .box input[type = "password"]:focus, .box input[type = "email"]:focus{
+    width: 400px;
+    border-color: #1742d1;
+}
+.box input[type = "button"]{
+    border: 0;
+    background: rgb(7, 133, 122);
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 1px solid #03165f;
+    padding: 14px 20px;
+    width: 25%;
+    outline: none;
+    color: white;
+    transition: 0.25s;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.box input[type = "Submit"]:hover{
+    background: #344895;
+    color: aliceblue;
+}
