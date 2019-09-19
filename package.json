@@ -7,10 +7,9 @@
     "node": "10.16.3"
   },
   "scripts": {
-  
     "dev": "nodemon index.js --exec babel-node --",
     "build": "babel Server -d build",
-    "start":"nodemon -r esm ./Server/index.js"
+    "start": "nodemon -r esm ./Server/index.js"
   },
   "repository": {
     "type": "git",
@@ -27,6 +26,7 @@
     "esm": "^3.2.25",
     "express": "^4.17.1",
     "moment": "^2.24.0",
+    "nodemon": "^1.19.2",
     "uuid": "^3.3.3"
   },
   "devDependencies": {
@@ -38,7 +38,6 @@
     "@typescript-eslint/parser": "^2.3.0",
     "eslint": "^6.4.0",
     "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.18.2",
-    "nodemon": "^1.19.2"
+    "eslint-plugin-import": "^2.18.2"
   }
 }
