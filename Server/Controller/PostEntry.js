@@ -1,12 +1,13 @@
 import notes from '../Models/db'; 
+import moment from 'moment';
 
 const PostEntry= (req, res) => {
+ const identifier = parseInt(notes.length + 1, 10);
 let newEntry = {
-    id: parseInt(req.body.id),
-
+    identifier,
     title: req.body.title,
     entry: req.body.entry, 
-    Date: new Date()
+    Date: moment().format('LL')
   };
 
   notes.push(newEntry);
