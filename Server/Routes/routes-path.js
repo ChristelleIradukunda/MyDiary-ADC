@@ -10,4 +10,4 @@ router.get ('/api/v1/entries',ViewAll);
 router.get ('/api/v1/entries/:id',GetOne);
 router.post ('/api/v1/entries',PostEntry);
 router.put ('/api/v1/entries/:id',updatee);
-export default router;
+export default router; 
