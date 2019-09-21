@@ -9,7 +9,8 @@
   "scripts": {
     "dev": "nodemon index.js --exec babel-node --",
     "build": "babel Server -d build",
-    "start": "nodemon -r esm ./Server/index.js"
+    "start": "nodemon -r esm ./Server/index.js",
+    "test": "mocha test.js"
   },
   "repository": {
     "type": "git",
@@ -31,9 +32,10 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.6.0",
-    "@babel/core": "^7.0.0",
+    "@babel/core": "^7.6.0",
     "@babel/node": "^7.6.1",
     "@babel/preset-env": "^7.6.0",
+    "@babel/register": "^7.6.0",
     "@typescript-eslint/eslint-plugin": "^2.3.0",
     "@typescript-eslint/parser": "^2.3.0",
     "chai": "^4.2.0",

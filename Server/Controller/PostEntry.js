@@ -2,7 +2,8 @@ import notes from '../Models/db';
 import moment from 'moment';
 
 const PostEntry= (req, res) => {
- const identifier = parseInt(notes.length + 1, 10);
+
+ const identifier = parseInt(notes.length + 1);
 let newEntry = {
     identifier,
     title: req.body.title,
