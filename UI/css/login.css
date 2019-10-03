@@ -18,7 +18,7 @@ height: auto;
 .box{
     /* width: 500px; */
     width: 50vw auto;
-    padding: 20px;
+    padding: 60px;
     /* position: absolute;
     top: 50%;
     left: 50%;
@@ -29,6 +29,7 @@ height: auto;
     height: auto;
     text-align: center;
     background: #00324e;
+   
     
 }
 ::placeholder{
@@ -53,6 +54,10 @@ p{
     color: rgb(140, 169, 194);
     font-size: 20px; 
       
+}
+
+.simbizi h2{
+    padding-top: 50px;
 }
 .box a{
     text-decoration:none;
