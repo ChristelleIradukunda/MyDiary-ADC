@@ -1,6 +1,6 @@
 import chai, { expect } from 'chai';
 import chaiHTTP from 'chai-http';
-import app from './index';
+import app from '../index';
 
 
 chai.use(chaiHTTP);
@@ -39,8 +39,10 @@ describe('Test Post', () => {
       .post('/api/v1/entries')
       .send(postNew)
       .end((err, res) => {
-        expect(res.status).to.equals(400);
         expect(res.body.title).to.not.equal('');
+        // expect(res.body.title).to.not.equal(String);
+        // expect(res.body.entry).to.not.be.equal('');
+      
         gettEntry();
       });
   });
@@ -61,7 +63,7 @@ describe('Test Delete', () => {
   });
 });
 
-//= ============================================ Put test ===============================================
+//============================================= Put test ===============================================
 
 
 describe('Test PUT', () => {
@@ -70,7 +72,9 @@ describe('Test PUT', () => {
       .request(app)
       .put('/api/v1/entries/:id')
       .end((err, res) => {
-        expect(res.status).to.be.equal(404);
+        expect(res.status).to.be.equal(400);
+        expect(res.body.entry).to.not.be.equal('');
+        
         gettEntry();
       });
   });
