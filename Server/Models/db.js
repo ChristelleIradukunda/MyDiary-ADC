@@ -27,9 +27,8 @@ const notes = [
         title: 'Wishes',
         entry: ' thinks critically and form....',
         Date: "12/4/2019"
-    },
+    }
 
 ];
-
 
 export default notes;
