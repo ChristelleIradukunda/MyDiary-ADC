@@ -1,13 +1,13 @@
 import chai, { expect } from 'chai';
 import chaiHTTP from 'chai-http';
-import app from './index';
+import app from '../index';
 
 
 chai.use(chaiHTTP);
 
 //= ================================ Test Get Endpoint ================================================
 
-describe('Test first API', () => {
+describe('Test Get all', () => {
   it('Checking the status of the api', (gettEntry) => {
     chai
       .request(app)
@@ -16,8 +16,6 @@ describe('Test first API', () => {
         expect(res.status).to.equals(200);
         expect(res.body).to.be.an('object');
         expect(res.id).not.be.equal('id === id');
-
-
         gettEntry();
       });
   });
@@ -39,8 +37,22 @@ describe('Test Post', () => {
       .post('/api/v1/entries')
       .send(postNew)
       .end((err, res) => {
-        expect(res.status).to.equals(400);
         expect(res.body.title).to.not.equal('');
+        expect(res.body.title).to.not.be.equal('');
+        expect(res.body.entry).to.not.be.equal('');
+      
+        gettEntry();
+      });
+  });
+
+  it('Checking datatype', (gettEntry) => {
+    chai
+      .request(app)
+      .post('/api/v1/entries')
+      .send(postNew)
+      .end((err, res) => {
+        expect(res.body).to.be.an('object');
+        expect(res.status).to.be.equal(400);
         gettEntry();
       });
   });
@@ -56,12 +68,13 @@ describe('Test Delete', () => {
       .delete('/api/v1/entries')
       .end((err, res) => {
         expect(res.status).to.be.equal(404);
+        expect(res.status).to.not.be.equal(201);
         gettEntry();
       });
   });
 });
 
-//= ============================================ Put test ===============================================
+//============================================= Put test ===============================================
 
 
 describe('Test PUT', () => {
@@ -70,7 +83,9 @@ describe('Test PUT', () => {
       .request(app)
       .put('/api/v1/entries/:id')
       .end((err, res) => {
-        expect(res.status).to.be.equal(404);
+        expect(res.status).to.be.equal(400);
+        expect(res.body.entry).to.not.be.equal('');
+        
         gettEntry();
       });
   });

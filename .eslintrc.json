@@ -35,7 +35,11 @@
         "max-len":"off",
         "padded-blocks":"off",
         "spaced-comment":"off",
-        "object-curly-newline":"off"
+        "object-curly-newline":"off",
+        "consistent-return":"off",
+        "arrow-parens":"off",
+        "quotes":"off",
+        
         
     
     }
