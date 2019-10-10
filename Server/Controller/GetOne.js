@@ -12,4 +12,5 @@ const getone= (req, res) => {
     }
   };
 
+  
 export default getone;

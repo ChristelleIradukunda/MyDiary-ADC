@@ -15,6 +15,10 @@
     color: aliceblue;
     height: 100vh;
 }
+
+.gr img{
+    border: 50%;
+}
 .gre{
     padding:30px;
 }
@@ -86,6 +90,7 @@ row-gap: 20px;
 
 .editor{
     text-align: center;
+    font-family: initial;
 }
 
 #buttoons{
@@ -107,6 +112,7 @@ row-gap: 20px;
 
     display: grid;
     grid-template-columns: 5fr 5fr;
+    font-family: initial;
 }
 
 .dashy{
@@ -114,6 +120,9 @@ row-gap: 20px;
     margin: 10%;
     text-align: center;
     
+}
+.dashy img{
+    border-radius: 50%;
 }
 .dashy a{
     text-decoration:none;
@@ -142,6 +151,7 @@ row-gap: 20px;
     color: #00324e;
     padding-top: 1em;
     max-width: 80%;
+    font-size: 20px;
     padding: 20px 7% 20px 10%;
 
 }
@@ -149,6 +159,7 @@ row-gap: 20px;
     color:#00324e;;
 }
 .under-btn{
+    color: #042e08;
     width: 88%;
     height: 12vh;
     background-color: #e5e9ee;
@@ -175,3 +186,36 @@ row-gap: 20px;
 .dashy i{
     font-size: 40px;
     }
+/* =========================================== All entry ================================================= */
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+
+  table{
+      width: 80%;
+      margin:4% 0% 5% 5%;
+      color: #042e08;
+  }
+
+  th td{
+      width: 2vw;
+  }
+th{
+    background-color: rgb(113, 167, 113);
+    height: 10%;
+    color: #042e08;
+}
+tr{
+    height: 5vh;
+}
+th{
+    height: 5vh;
+}
+.list{
+    width: 90%;
+}
+
+td a{
+    text-decoration: none;
+}
