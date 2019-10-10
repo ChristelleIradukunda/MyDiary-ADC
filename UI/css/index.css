@@ -23,6 +23,7 @@ body{
     flex-wrap: wrap;
     justify-content: flex-end;
     text-align: center;
+    justify-items: center;
 }
 .navbar{
     padding: 20px;
@@ -57,12 +58,12 @@ flex-wrap: wrap;
 
 .quote{
     margin-top: 100px;
-    font-size: 20px;
+    font-size: 24px;
     font-family: initial;
     text-align: center;
 }
 
-.container h1{
+.container h2{
     align-items: center;
     flex-direction: column;
     justify-content: center;
@@ -94,7 +95,6 @@ flex-wrap: wrap;
 	text-decoration: none; 
 	transition: 0.6s ease;
     color: #fff;
-   
 
 
 }
@@ -103,12 +103,21 @@ flex-wrap: wrap;
 	background-color: #fff;
 	color: #000;
 }
+#img{
+    width: 200px;
+     margin-top: 100px;
+ }
 .info{
     display: flex;
     height: 50vh;
     height: auto;
+    background-size: cover;
+    justify-content: center;
+    background-color: rgb(0, 0, 0);
+    
+    
+} 
 
-}
 
 .shadow{
     text-align: center;
@@ -117,6 +126,9 @@ flex-wrap: wrap;
     background-color: rgb(99, 107, 121);
     box-shadow: 2px 2px 5px#848482;
     font-size: 19px;
+    display: flex;
+    justify-content: center;
+    
    
 }
 .shadow p{
@@ -133,7 +145,7 @@ flex-wrap: wrap;
 }
 .container3 img{
     max-width: 100%;
-    height: auto;
+    height: 20vh auto;
 }
 
 .footer{
@@ -141,9 +153,12 @@ flex-wrap: wrap;
     background-color: rgb(36, 39, 48);
     max-width: 100%;
     height: auto;   
+    justify-content: center;
+
 }
 .colors{
-    background-color: #12161d;
+    background-color: #02070f;
+    justify-content: center;
 }
 .colors a{
     text-decoration: none;
@@ -182,11 +197,13 @@ display: inline-block;
 }
 
 .second {
-    padding-top: 20px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr;
+    grid-column-end: 1;
+    
 }
-.second .middle-div{
-max-width: 20%;
-}
+
 
 .last-button{
 background-color: #373749;
@@ -195,14 +212,24 @@ color: #fff;
 .second h4{
     color: white;
     font-size: 20px;
+    text-align: center;
 }
  .second div{
     text-align: center;;
-    max-width: 30%;
+    
  }
+.comp p{
+    text-align: center;
+    max-width: 50%;
+}
+
  .second li{
     color: white;
     list-style-type: none;
+ }
+
+ .second p{
+   max-width: 100%;
  }
  .end-div h4{
      padding-bottom: 20px;
@@ -216,5 +243,4 @@ color: #fff;
      background-color: #11111b;
  }
 
- 
  

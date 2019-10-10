@@ -27,13 +27,13 @@ body{
     flex-basis: 50px;
     text-align: center;
     flex-grow: 1;
-    height: 70vh;
+    height: 100vh;
     justify-items: start;
     max-width: 100%;
     width: auto;
 }
 .dashboard{
-    width: 10%;
+    width: 5%;
     background-color:#00324e;
     height: 100vh auto;
     color: white;
@@ -114,7 +114,6 @@ font-size: 17px;
 /* ====================================Dashboard css================================================ */
 .recent-story-div{
     background: rgb(241, 243, 243);
-    color: #000008;
     width: 25%;
     height: 30vh; 
     align-items: center;
@@ -126,9 +125,13 @@ font-size: 17px;
     margin: 1%;
     
 }
-.recent-story-div a{
+.recent-story-div:hover{
+background-color: #eeeef56c;
+}
+.Dashboard-recent a{
     text-decoration: none;
     color: black;
+
 }
 .Dashboard-recent{
     display: flex;
