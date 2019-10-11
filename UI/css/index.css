@@ -162,15 +162,19 @@ color: #78d6aa;
     max-width: 100%;
     height: auto;   
     justify-content: center;
+    font-family: 'Cardo', serif;
+    font-size: 17px;
 
 }
 .colors{
     background-color: #02070f;
     justify-content: center;
+    font-size: 17px;
 }
 .colors a{
     text-decoration: none;
     color: aliceblue;
+    font-size: 17px;
 }
 .colors a:hover{
     color: green;
