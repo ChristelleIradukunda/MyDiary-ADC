@@ -139,11 +139,14 @@ row-gap: 20px;
 .save{
     background-color: #e0e2e9;
     padding: 10px;
+    font-family: 'Slabo 10px', serif;
 
 }
 .cancel {
     background-color: #e0e2e9;
     padding: 10px;
+    font-family: 'Slabo 10px', serif;
+
     
     
 }
@@ -151,25 +154,28 @@ row-gap: 20px;
     color: #00324e;
     padding-top: 1em;
     max-width: 80%;
-    font-size: 20px;
+    font-size: 17px;
     padding: 20px 7% 20px 10%;
 
 }
 .cancel h3{
-    color:#00324e;;
+    color:#031925;;
 }
 .under-btn{
-    color: #042e08;
+    color: #00324e ;
     width: 88%;
-    height: 12vh;
+    height: 12vh auto;
     background-color: #e5e9ee;
     margin: 20px 7% 20px 5%;
     border-radius:5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
  
 }
 
 .welcome{
     color: #00324e;
+    font-family: 'Slabo 10px', serif;
 }
 
 .yellow{

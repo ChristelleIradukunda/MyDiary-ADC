@@ -1,4 +1,5 @@
 import express from 'express';
+import '@babel/polyfill';
 import bodyParser from 'body-parser';
 import router from './Routes/routes-path'; 
 

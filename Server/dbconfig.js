@@ -13,22 +13,22 @@ pool.on('connect', () => {
 });
 const Tables = () => {
     const myDiaryTable = `CREATE TABLE IF NOT EXISTS
-        Entry(
-          EntryID INT PRIMARY KEY,
-          Title VARCHAR(128) NOT NULL,
-          Description VARCHAR(128) NOT NULL,
-          Date DATE NOT NULL
+        entry(
+          id SERIAL PRIMARY KEY,
+          title VARCHAR(128) NOT NULL,
+          description VARCHAR(128) NOT NULL,
+          date DATE NOT NULL
         )`;
 
         const myDiaryUsers = `CREATE TABLE IF NOT EXISTS
-        Users(
-          UserID INT PRIMARY KEY,
-          First_Name VARCHAR(128) NOT NULL,
-          Second_Name VARCHAR(128) NOT NULL,
-          Email VARCHAR NOT NULL,
-          UserName VARCHAR (50) NOT NULL,
-          Password VARCHAR NOT NULL,
-          Confirm_Password VARCHAR NOT NULL
+        users(
+          userid INT PRIMARY KEY,
+          first_name VARCHAR(128) NOT NULL,
+          second_name VARCHAR(128) NOT NULL,
+          email VARCHAR NOT NULL,
+          userName VARCHAR (50) NOT NULL,
+          password VARCHAR NOT NULL,
+          confirm_password VARCHAR NOT NULL
         )`;
     const queries =`${myDiaryTable}; ${myDiaryUsers}`;
       pool.query(queries).then((res) => {
@@ -46,6 +46,6 @@ const Tables = () => {
     process.exit(0);
   });
  
-module.exports = Tables, pool;
+module.exports = {Tables, pool};
 
 require('make-runnable');

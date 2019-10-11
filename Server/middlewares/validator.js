@@ -2,7 +2,7 @@
   const validateEntry = (req, res, next) => {
     
         const schema ={
-            entryid:joi.required(),
+            
             title: joi.string().trim().min(3).max(100).required(),
             description: joi.string().required()
             };
