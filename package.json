@@ -10,7 +10,7 @@
     "build": "babel Server -d build",
     "start": "nodemon -r esm ./Server/index.js",
     "test": "cd Server && nyc --reporter=html --reporter=text mocha --timeout 5000 --require @babel/polyfill --require @babel/register Test/* --exit",
-    "create": "node ./Server/dbconfig.js Tables",
+    "create": "babel-node ./Server/dbconfig.js Tables",
     "coverage": "nyc npm test && nyc report --reporter=text-lcov | coveralls"
   },
   "repository": {

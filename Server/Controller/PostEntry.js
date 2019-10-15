@@ -1,15 +1,17 @@
 import moment from 'moment';
 import { pool } from '../dbconfig';
 
+//=================================== Post Entry===================================================
+
 const PostEntry= (req, res) => {
 
 const {title, description} = req.body;
 let newEntry =  [title, description, moment().format('LL')]
- 
+
 
  pool.connect((err, client, trial) => {
     const queries = 'INSERT INTO entry(title, description, date) VALUES($1,$2,$3) RETURNING *';
-  
+
     client.query(queries, newEntry, (error, result) => {
       trial();
       if (error) {
@@ -52,5 +54,52 @@ const GetOne = async (req, res) => {
       })
     }
   };
-export {PostEntry, GetAll, GetOne};
+//===================================================== Delete =========================================================
+
+const Delete = async (req, res) => {
+
+  const query = 'DELETE FROM entry WHERE id = $1 RETURNING *';
+  const data = [parseInt(req.params.id)];
+
+  const remove = await pool.query(query, data);
+  if (remove.rows === 1) {
+      res.status(404).json({
+          status: 404,
+          message: 'Entry not found'
+      });
+  }
+  else {
+      res.status(200).json({
+          status: 200,
+          message: 'Deleted successfully',
+          
+      });
+  }
+};
+//=============================================== Modify Entry ======================================================
+
+const Update = async (req, res) =>  {
+  const finder = 'SELECT * FROM entry WHERE id=$1';
+  const updateOne =`UPDATE entry SET title=$1, description=$2 WHERE id=$3 RETURNING *`;
+
+  try {
+
+    const { rows } = await db.query(finder, [req.params.id]);
+    if(!rows[0]) {
+      return res.status(404).send({'message': 'Entry not found'});
+    }
+    const dat = [
+      req.body.title || rows[0].title,
+      req.body.description || rows[0].description,
+      moment(new Date())
+      
+    ];
+    const res = await db.query(updateOne, dat);
+    return res.status(200).send(res.rows[0]);
+  } catch(err) {
+    return res.status(400).send(err);
+  }
+}
+
+export { PostEntry, GetAll, GetOne, Delete, Update };
 
