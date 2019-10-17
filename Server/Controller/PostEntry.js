@@ -1,6 +1,7 @@
 import moment from 'moment';
 import { pool } from '../dbconfig';
 
+
 //=================================== Post Entry===================================================
 
 const PostEntry= (req, res) => {
@@ -84,22 +85,23 @@ const Update = async (req, res) =>  {
 
   try {
 
-    const { rows } = await db.query(finder, [req.params.id]);
+    const { rows } = await pool.query(finder, [parseInt(req.params.id)]);
     if(!rows[0]) {
       return res.status(404).send({'message': 'Entry not found'});
     }
     const dat = [
       req.body.title || rows[0].title,
       req.body.description || rows[0].description,
-      moment(new Date())
+      parseInt(req.params.id)
+      // moment(new Date())
       
     ];
-    const res = await db.query(updateOne, dat);
-    return res.status(200).send(res.rows[0]);
+    const result = await pool.query(updateOne, dat);
+    return res.status(200).send(result.rows[0]);
   } catch(err) {
     return res.status(400).send(err);
   }
 }
-
+ 
 export { PostEntry, GetAll, GetOne, Delete, Update };
 

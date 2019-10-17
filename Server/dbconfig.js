@@ -23,13 +23,13 @@ const Tables = () => {
 
         const myDiaryUsers = `CREATE TABLE IF NOT EXISTS
         users(
-          userid INT PRIMARY KEY,
+          userid SERIAL PRIMARY KEY,
           first_name VARCHAR(128) NOT NULL,
           second_name VARCHAR(128) NOT NULL,
           email VARCHAR NOT NULL,
           userName VARCHAR (50) NOT NULL,
-          password VARCHAR NOT NULL,
-          confirm_password VARCHAR NOT NULL
+          password VARCHAR NOT NULL
+          
         )`;
     const queries =`${myDiaryTable}; ${myDiaryUsers}`;
       pool.query(queries).then((res) => {
