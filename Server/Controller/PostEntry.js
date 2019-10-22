@@ -18,8 +18,8 @@ let newEntry =  [title, description, moment().format('LL')]
       if (error) {
         return res.status(400).json({ error });
       }
-      return res.status(202).send({
-        status: 202,
+      return res.status(200).send({
+        status: 201,
         result: result.rows[0],
       });
     });
@@ -93,7 +93,7 @@ const Update = async (req, res) =>  {
       req.body.title || rows[0].title,
       req.body.description || rows[0].description,
       parseInt(req.params.id)
-      // moment(new Date())
+      
       
     ];
     const result = await pool.query(updateOne, dat);
