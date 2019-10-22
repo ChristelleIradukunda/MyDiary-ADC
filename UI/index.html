@@ -2,14 +2,14 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
     <title>Index</title>
     <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <link rel="stylesheet" href="./css/login.css">
     <link rel="stylesheet" type="text/css" href="https://fontawesome.com/icons?d=gallery">
-    <link rel="stylesheet" type="text/css"
-        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Cardo|Crimson+Text|Patua+One|Poppins|Slabo+27px&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Patua+One|Poppins|Slabo+27px&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -17,17 +17,43 @@
     <div class="image">
 
         <div class="header">
-            <div class="navbar logo"><img src="./assets/whitelogo.png" width="160" height="160"></div>
 
-            <div class="navbar login"><a href="login.html">Sign-in</a></div>
+            
+                    <div class="navbar logo"><img src="./assets/whitelogo.png" width="160" height="160"></div>
+
+                    <div class="navbar login"><a onclick="document.getElementById('idy').style.display='block'">Sign-in</a>
+                               </div>
+            
+
+            <div class="user-form" id="idy">
+                <span onclick="document.getElementById('idy').style.display='none'" class="close"
+                    title="Close Modal">&times;</span>
+
+
+                <form class="box" action="login.html" method="POST">
+
+                    <h2>Sign In</h2>
+                    <input class="username" type="text" name="" value="" placeholder="Username" required>
+                    <input class="password" type="password" name="" value="" placeholder="Password" required>
+
+                    <a href="account.html">
+                        <input type="button" value="Login">
+                    </a>
+
+                    <p>You don't have an account?
+                        <a href="NewAccount.html">Create new account</a></p>
+                    <p><a href="index.html">Back</a></p>
+                </form>
+            </div>
         </div>
+
 
         <div class="container">
             <div class="quote">
 
 
                 <p> Overcome your stress, anxiety and allow you to have a peaceful mind </p>
-                <h2> <i class="fa fa-book"></i>MY DIARY</h2>
+                <h3> <i class="fa fa-book"></i>MY DIARY</h3>
 
             </div>
             <div id="get-started"> <a href="info.html" id="button"> Get Started</a> </div>
@@ -38,22 +64,7 @@
 
     </div>
 
-    <!--            
-<div class="info">
-
-    <div class="container1 shadow"> <i class="fa fa-book"></i>
-        <p>Everyone can have personal journal on MyDiary which is safe</p>
-    </div>
-    <div class="container2 shadow">
-            <img src="./assets/9-512.png" alt="" height="100" width="100">
-            <p>Go ahead and create your own private or public diary today. </p>
-        </div>
-        <div class="container3 shadow">
-                <img src="./assets/person-typing.jpg" alt="" height="100" width="150">
-                <p> Feel free to add as many as possible  journals on your account</p>
-            </div>
-
-</div> -->
+               
 
     <div class="footer colors">
         <p>
@@ -70,10 +81,11 @@
     </div>
 
     <div class="footer second">
-        <div>
-            <h4>Company</h4>
+        <div class="comp">
+            
             <p>
-                Everything we do is to keep journals.</p>
+                Everything we do is to keep journals. <br>
+                Write everyday without any hesitation</p>
         </div>
         <div class="middle-div">
             <h4>Servises</h4>
